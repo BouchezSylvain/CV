@@ -178,12 +178,10 @@
               // 3️⃣ Persister le choix pour les visites futures
               localStorage.setItem('analytics_consent', 'granted');
             }
-                console.log("test4);
-        s
+        
             // Attacher le gestionnaire au bouton
             document.getElementById('accept-cookies')
                     .addEventListener('click', grantAnalyticsConsent);
-                console.log("test5);
         
             // -----------------------------------------------------------------
             // Si le consentement a déjà été donné lors d’une visite précédente,
@@ -193,7 +191,6 @@
               gtag('consent', 'update', {'analytics_storage': 'granted'});
               document.getElementById('cookie-banner').style.display = 'none';
             }
-                console.log("test6);
         </script>
     </body>
 </html>

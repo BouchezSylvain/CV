@@ -164,16 +164,16 @@
         <script>
             // Fonction appelée quand l’utilisateur accepte les cookies
             function grantAnalyticsConsent() {
-                console.log("test1);
+                console.log("test1");
               // 1️⃣ Met à jour le consentement : autorise le stockage analytique
               gtag('consent', 'update', {
                 'analytics_storage': 'granted'   // maintenant les hits seront envoyés
               });
-                console.log("test2);
+                console.log("test2");
         
               // 2️⃣ Masquer la bannière
               document.getElementById('cookie-banner').style.display = 'none';
-                console.log("test3);
+                console.log("test3");
         
               // 3️⃣ Persister le choix pour les visites futures
               localStorage.setItem('analytics_consent', 'granted');

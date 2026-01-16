@@ -5,23 +5,29 @@
         <title>Sylvain Bouchez</title>
         <link href='https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic' rel='stylesheet' type='text/css'>
         <link href='style.css' rel='stylesheet' type='text/css'>
-        <!-- GA4 -->
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-T4K285PT');</script>
+        <!-- End Google Tag Manager -->
+        <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-5B7W4YZM1E"></script>
         <script>
-        // Crée le dataLayer et la fonction gtag()
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
         
-        // Initialise gtag
-        gtag('js', new Date());
-        
-        // Par défaut, on refuse le stockage analytique
-        gtag('consent', 'default', {
-          'analytics_storage': 'denied'   // aucune donnée n’est envoyée tant que l’utilisateur n’accepte pas
-        });
+          gtag('config', 'G-5B7W4YZM1E');
         </script>
+    </head>
     <!-- Merci à Javier Latorre, thème utilisé : https://codepen.io/jlalovi/pen/NPeBqZ -->
     <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4K285PT"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
         <!-- MAIN CONTAINER -->
         <div id="main_container">
         <!-- HEADER -->
@@ -154,43 +160,5 @@
             <p class="footer_name">Sylvain Bouchez 2026</p>
         </div>
         </div>
-        <div id="cookie-banner">
-            <span>
-              Nous utilisons des cookies analytiques pour améliorer votre expérience.
-              <a href="/privacy" target="_blank">En savoir plus</a>.
-            </span>
-            <button id="accept-cookies">Accepter</button>
-        </div>
-        <script>
-            // Fonction appelée quand l’utilisateur accepte les cookies
-            function grantAnalyticsConsent() {
-                console.log("test1");
-              // 1️⃣ Met à jour le consentement : autorise le stockage analytique
-              gtag('consent', 'update', {
-                'analytics_storage': 'granted'   // maintenant les hits seront envoyés
-              });
-                console.log("test2");
-        
-              // 2️⃣ Masquer la bannière
-              document.getElementById('cookie-banner').style.display = 'none';
-                console.log("test3");
-        
-              // 3️⃣ Persister le choix pour les visites futures
-              localStorage.setItem('analytics_consent', 'granted');
-            }
-        
-            // Attacher le gestionnaire au bouton
-            document.getElementById('accept-cookies')
-                    .addEventListener('click', grantAnalyticsConsent);
-        
-            // -----------------------------------------------------------------
-            // Si le consentement a déjà été donné lors d’une visite précédente,
-            // ré‑activer immédiatement le suivi et masquer la bannière.
-            // -----------------------------------------------------------------
-            if (localStorage.getItem('analytics_consent') === 'granted') {
-              gtag('consent', 'update', {'analytics_storage': 'granted'});
-              document.getElementById('cookie-banner').style.display = 'none';
-            }
-        </script>
     </body>
 </html>

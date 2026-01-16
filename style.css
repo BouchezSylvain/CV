@@ -306,7 +306,8 @@ ul {
 		width: 210px;
 		height: 240px;
 		margin:10px;
-		background: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/86033/profile/profile-512_3.jpg) 100% /210px no-repeat;
+		/* background: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/86033/profile/profile-512_3.jpg) 100% /210px no-repeat; */
+		background-color: #FFFFFF;
 	}
 
 .hello_content,
@@ -345,7 +346,7 @@ ul {
 		width: 30px;
 		height: 30px;
 		z-index: 9;
-		background: url(https://www.toptal.com/designers/subtlepatterns/patterns/dark_wall.png) repeat;
+		background-color: #FFFFFF;
     transform: rotate(45deg);
 	}
 	.cut2:before {

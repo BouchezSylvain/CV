@@ -199,21 +199,26 @@
         <script>
             // Fonction appelée quand l’utilisateur accepte les cookies
             function grantAnalyticsConsent() {
+                console.log("test1);
               // 1️⃣ Met à jour le consentement : autorise le stockage analytique
               gtag('consent', 'update', {
                 'analytics_storage': 'granted'   // maintenant les hits seront envoyés
               });
+                console.log("test2);
         
               // 2️⃣ Masquer la bannière
               document.getElementById('cookie-banner').style.display = 'none';
+                console.log("test3);
         
               // 3️⃣ Persister le choix pour les visites futures
               localStorage.setItem('analytics_consent', 'granted');
             }
-        
+                console.log("test4);
+        s
             // Attacher le gestionnaire au bouton
             document.getElementById('accept-cookies')
                     .addEventListener('click', grantAnalyticsConsent);
+                console.log("test5);
         
             // -----------------------------------------------------------------
             // Si le consentement a déjà été donné lors d’une visite précédente,
@@ -223,6 +228,7 @@
               gtag('consent', 'update', {'analytics_storage': 'granted'});
               document.getElementById('cookie-banner').style.display = 'none';
             }
+                console.log("test6);
         </script>
     </body>
 </html>
